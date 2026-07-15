@@ -53,7 +53,7 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
 </style>
 
 <h1>At-Risk &amp; Recovery Panel</h1><div style="font-size:15px;color:#3F4B5C;margin-top:-4px;margin-bottom:6px">Breaks, Holds, and Scheduled vs Attended</div>
-<div class="meta">Source: XP scheduling occurrences + override cancellation reasons &middot; Rates: $99/class Accelerate (rank 8/10/14), $68/class 1:1 Private (rank 32) &middot; Refreshed Wednesday, July 15, 2026 3:19 PM ET</div>
+<div class="meta">Source: XP scheduling occurrences + override cancellation reasons &middot; Rates: $99/class Accelerate (rank 8/10/14), $68/class 1:1 Private (rank 32) &middot; Refreshed Wednesday, July 15, 2026 3:22 PM ET</div>
 
 <div class="tabs">
 <button class="tab-btn active" onclick="showTab(event, 'gap')">Attendance Gap</button>
@@ -66,7 +66,7 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
   <div class="kpi"><div class="n">81,861</div><div class="l">Scheduled YTD</div></div>
   <div class="kpi teal"><div class="n">70,121</div><div class="l">Attended (incl. makeups)</div></div>
   <div class="kpi red"><div class="n">11,740</div><div class="l">Cancelled (gross)</div></div>
-  <div class="kpi red"><div class="n">$1,154,231</div><div class="l">Revenue leaked (gross)</div></div>
+  <div class="kpi red"><div class="n">$1,154,231</div><div class="l">Unrealized revenue (gross)</div></div>
 </div>
 
 <h2>Where the gap comes from</h2>
@@ -75,13 +75,13 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
     <div class="title">Family cancels / absences</div>
     <div class="cnt">8,960</div>
     <div class="dol">$882,142</div>
-    <div class="desc"><strong>The biggest bucket. Makeups win back ~24% ($214,364), leaving a $667,778 net leak.</strong> Includes Planned/Unplanned Absence, No Shows, and student drops. The net is the retention lever &mdash; recoverable only by keeping families engaged.</div>
+    <div class="desc"><strong>The biggest bucket. Makeups win back ~24% ($214,364), leaving $667,778 unrealized (net).</strong> Includes Planned/Unplanned Absence, No Shows, and student drops. The net is the retention lever &mdash; recoverable only by keeping families engaged.</div>
   </div>
   <div class="bucket instr">
     <div class="title">Instructor cancels</div>
     <div class="cnt">1,204</div>
     <div class="dol">$118,235</div>
-    <div class="desc">Instructor PTO / callouts &mdash; recovered in real time by substitute instructors, so net leak after coverage is ~0. (Makeups are credited to family recovery, not counted here.)</div>
+    <div class="desc">Instructor PTO / callouts &mdash; recovered in real time by substitute instructors, so it nets to ~0 after coverage. (Makeups are credited to family recovery, not counted here.)</div>
   </div>
   <div class="bucket system">
     <div class="title">Game-U closures</div>
@@ -101,7 +101,14 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
 
 
 
+<h2>Monthly unrealized-revenue trend (2026)</h2>
+<div class="mini">
+  <div class="row"><span class="k">2026-01</span><span class="v"><span class="dim">1,771 of 11,863 (15%)</span> <strong style="color:#B23A48">$173,810</strong></span></div><div class="row"><span class="k">2026-02</span><span class="v"><span class="dim">1,230 of 10,721 (11%)</span> <strong style="color:#B23A48">$120,468</strong></span></div><div class="row"><span class="k">2026-03</span><span class="v"><span class="dim">1,515 of 12,416 (12%)</span> <strong style="color:#B23A48">$148,962</strong></span></div><div class="row"><span class="k">2026-04</span><span class="v"><span class="dim">1,711 of 13,146 (13%)</span> <strong style="color:#B23A48">$168,335</strong></span></div><div class="row"><span class="k">2026-05</span><span class="v"><span class="dim">2,200 of 13,392 (16%)</span> <strong style="color:#B23A48">$216,498</strong></span></div><div class="row"><span class="k">2026-06</span><span class="v"><span class="dim">2,111 of 13,719 (15%)</span> <strong style="color:#B23A48">$207,656</strong></span></div><div class="row"><span class="k">2026-07</span><span class="v"><span class="dim">64 of 441 (15%)</span> <strong style="color:#B23A48">$6,305</strong></span></div>
+</div>
 
+<div class="foot">
+<strong>Methodology.</strong> Scheduled = XP class occurrences (rank 8/10/14/32) with a start date in 2026 YTD, recurring events expanded. Attended = occurrence with no cancellation override attached (plus every makeup-tagged occurrence counted as intended-attended). Cancellation reason categorized from the override text (family / instructor / Game-U / unclassified). <em>Corrected classifier (2026-07-01):</em> &ldquo;Planned Absence&rdquo; and &ldquo;Unplanned Absence&rdquo; strings are family-side signals in this dataset &mdash; prior version incorrectly bucketed them as instructor cancels. Recovery accounting uses 2219 YTD sub-covered + 2998 YTD makeups; &ldquo;net not-happened&rdquo; subtracts makeups from total cancels. Blended $99/68 per class.
+</div>
 
 
 <h2 style="margin-top:28px">Top 25 Heavy-Cancel Families &mdash; outreach queue</h2>
@@ -413,17 +420,9 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
 </td>
 </tr>
 </tbody></table></div>
-<h2>Monthly leak trend (2026)</h2>
-<div class="mini">
-  <div class="row"><span class="k">2026-01</span><span class="v"><span class="dim">1,771 of 11,863 (15%)</span> <strong style="color:#B23A48">$173,810</strong></span></div><div class="row"><span class="k">2026-02</span><span class="v"><span class="dim">1,230 of 10,721 (11%)</span> <strong style="color:#B23A48">$120,468</strong></span></div><div class="row"><span class="k">2026-03</span><span class="v"><span class="dim">1,515 of 12,416 (12%)</span> <strong style="color:#B23A48">$148,962</strong></span></div><div class="row"><span class="k">2026-04</span><span class="v"><span class="dim">1,711 of 13,146 (13%)</span> <strong style="color:#B23A48">$168,335</strong></span></div><div class="row"><span class="k">2026-05</span><span class="v"><span class="dim">2,200 of 13,392 (16%)</span> <strong style="color:#B23A48">$216,498</strong></span></div><div class="row"><span class="k">2026-06</span><span class="v"><span class="dim">2,111 of 13,719 (15%)</span> <strong style="color:#B23A48">$207,656</strong></span></div><div class="row"><span class="k">2026-07</span><span class="v"><span class="dim">64 of 441 (15%)</span> <strong style="color:#B23A48">$6,305</strong></span></div>
-</div>
-
-<div class="foot">
-<strong>Methodology.</strong> Scheduled = XP class occurrences (rank 8/10/14/32) with a start date in 2026 YTD, recurring events expanded. Attended = occurrence with no cancellation override attached (plus every makeup-tagged occurrence counted as intended-attended). Cancellation reason categorized from the override text (family / instructor / Game-U / unclassified). <em>Corrected classifier (2026-07-01):</em> &ldquo;Planned Absence&rdquo; and &ldquo;Unplanned Absence&rdquo; strings are family-side signals in this dataset &mdash; prior version incorrectly bucketed them as instructor cancels. Recovery accounting uses 2219 YTD sub-covered + 2998 YTD makeups; &ldquo;net not-happened&rdquo; subtracts makeups from total cancels. Blended $99/68 per class.
-</div>
 <h2>Recommendations</h2>
 <div style="background:#fff;border:1px solid #E4E9EF;border-radius:8px;padding:20px 24px;margin-bottom:12px;font-size:15px;line-height:1.55">
-<div style="color:#3F4B5C;margin-bottom:14px">Family cancels are the largest leak (~$882,142 gross). Makeups already win back ~24% ($214,364); the remaining <strong>$667,778 net</strong> can only be recovered through <strong>retention outreach and behavior change</strong> &mdash; the biggest lever in the plan. A realistic 12-month recovery (25&ndash;40% of the net) is <strong>$166,944&ndash;$267,111/yr</strong>.</div>
+<div style="color:#3F4B5C;margin-bottom:14px">Family cancels are the largest source of unrealized revenue (~$882,142 gross). Makeups already win back ~24% ($214,364); the remaining <strong>$667,778 net</strong> can only be recovered through <strong>retention outreach and behavior change</strong> &mdash; the biggest lever in the plan. A realistic 12-month recovery (25&ndash;40% of the net) is <strong>$166,944&ndash;$267,111/yr</strong>.</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
 
 <div style="background:#FEF3F2;border-left:4px solid #B23A48;padding:14px 18px;border-radius:6px">
@@ -438,11 +437,11 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
 </div>
 
 <div style="background:#FEF6E9;border-left:4px solid #C7821E;padding:14px 18px;border-radius:6px">
-<div style="font-weight:700;color:#1F3A5F;margin-bottom:8px;font-size:15.5px">2. Instructor cancels &mdash; <span style="color:#B23A48">~$0 net leak</span></div>
+<div style="font-weight:700;color:#1F3A5F;margin-bottom:8px;font-size:15.5px">2. Instructor cancels &mdash; <span style="color:#B23A48">~$0 net</span></div>
 <div style="font-size:13px;color:#3F4B5C;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:6px">Supply-side &middot; hold at ~$0 net; trim sub-premium cost</div>
 <ul style="margin:0;padding-left:18px;color:#2C3E50">
 <li>Smaller bucket than we originally thought &mdash; substitute instructors cover most instructor cancels in real time (makeups recover family cancels, not these).</li>
-<li>Continue sub premium reform + thin-bench recruiting to shave the residual net leak.</li>
+<li>Continue sub premium reform + thin-bench recruiting to trim the residual net exposure.</li>
 <li>Finish Scheduling Bots rollout to shrink acceptance latency.</li>
 <li>Track: emergency answer rate (already in the CX dashboard).</li>
 </ul>
@@ -462,7 +461,7 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
 <div style="font-weight:700;color:#1F3A5F;margin-bottom:8px;font-size:15.5px">4. Game-U closures &mdash; <span style="color:#B23A48">$93,436</span></div>
 <div style="font-size:13px;color:#3F4B5C;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:6px">Workflow check &middot; small bucket</div>
 <ul style="margin:0;padding-left:18px;color:#2C3E50">
-<li>Mostly holiday closures &mdash; families get a reschedule offer, most makeups get taught and billed. Not really a leak in the billing model.</li>
+<li>Mostly holiday closures &mdash; families get a reschedule offer, most makeups get taught and billed. Not billed under our held-only model, so it isn't lost revenue.</li>
 <li>Small residual of truly discretionary Game-U cancels; low priority.</li>
 </ul>
 </div>
