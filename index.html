@@ -50,10 +50,18 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
 .mini .dim { color: #3F4B5C; font-size:14px; }
 .foot { font-size:13.5px; color: #3F4B5C; margin-top: 24px; border-top: 1px solid #E4E9EF; padding-top: 12px; line-height: 1.6; }
 @media print { body { max-width: 7.7in !important; padding: 0 !important; background: #fff !important; font-size: 10.5pt !important; } h1 { font-size: 16pt !important; } h2 { font-size: 11pt !important; } .kpi .n { font-size: 17pt !important; } .bucket .cnt { font-size: 15pt !important; } table.top { font-size: 9pt !important; } }
-</style>
+
+/* at-risk-tab-override */
+.tabs { display: flex; gap: 4px; border-bottom: 3px solid #1F3A5F; margin-bottom: 24px; margin-top: 12px; align-items: flex-end; }
+.tab-btn { background: #F0F4F8; border: 1px solid #E4E9EF; border-bottom: none; padding: 12px 26px; font-size: 17px; font-weight: 700; color: #4A5A6E; cursor: pointer; font-family: inherit; letter-spacing: 0.2px; border-radius: 8px 8px 0 0; margin-bottom: -1px; transition: all .12s; }
+.tab-btn:hover { color: #1F3A5F; background: #E4E9EF; }
+.tab-btn.active { color: #fff; background: #1F3A5F; border-color: #1F3A5F; }
+.tabs-drops-link { background: #2C4D7B; border: 1px solid #2C4D7B; padding: 11px 22px; font-size: 15px; font-weight: 700; color: #fff; cursor: pointer; font-family: inherit; letter-spacing: 0.2px; border-radius: 8px; margin-left: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 5px rgba(31,58,95,0.28); transition: all .12s; }
+.tabs-drops-link:hover { background: #1F3A5F; box-shadow: 0 3px 9px rgba(31,58,95,0.4); }
+/* end at-risk-tab-override */</style>
 
 <h1>At-Risk &amp; Recovery Panel</h1><div style="font-size:15px;color:#3F4B5C;margin-top:-4px;margin-bottom:6px">Breaks, Holds, and Scheduled vs Attended</div>
-<div class="meta">Source: XP scheduling occurrences + override cancellation reasons &middot; Rates: $99/class Accelerate (rank 8/10/14), $68/class 1:1 Private (rank 32) &middot; Refreshed Thursday, July 16, 2026 10:36 PM ET</div>
+<div class="meta">Source: XP scheduling occurrences + override cancellation reasons &middot; Rates: $99/class Accelerate (rank 8/10/14), $68/class 1:1 Private (rank 32) &middot; Refreshed Thursday, July 16, 2026 10:40 PM ET</div>
 
 <div class="tabs">
 <button class="tab-btn active" onclick="showTab(event, 'gap')">Attendance Gap</button>
