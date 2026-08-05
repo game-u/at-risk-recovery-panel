@@ -1,4 +1,4 @@
-<meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>At-Risk &amp; Recovery Panel</title>
+﻿<meta charset="utf-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>At-Risk &amp; Recovery Panel</title>
 <style>
 @page { size: letter; margin: 0.4in; }
 body { font-family: 'Calibri', -apple-system, sans-serif; color: #1F3A5F; font-size:15.5px; line-height: 1.45; margin: 0; padding: 24px 32px; max-width: 1400px; background: #F5F6F8; }
@@ -58,6 +58,8 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
 .tab-btn.active { color: #fff; background: #1F3A5F; border-color: #1F3A5F; }
 .tabs-drops-link { background: #2C4D7B; border: 1px solid #2C4D7B; padding: 11px 22px; font-size: 15px; font-weight: 700; color: #fff; cursor: pointer; font-family: inherit; letter-spacing: 0.2px; border-radius: 8px; margin-left: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 5px rgba(31,58,95,0.28); transition: all .12s; }
 .tabs-drops-link:hover { background: #1F3A5F; box-shadow: 0 3px 9px rgba(31,58,95,0.4); }
+.tabs-vip-link { background: #16A085; border: 1px solid #16A085; padding: 11px 22px; font-size: 15px; font-weight: 700; color: #fff; cursor: pointer; font-family: inherit; letter-spacing: 0.2px; border-radius: 8px; margin-left: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 5px rgba(22,160,133,0.28); transition: all .12s; }
+.tabs-vip-link:hover { background: #12836C; box-shadow: 0 3px 9px rgba(22,160,133,0.4); }
 /* end at-risk-tab-override */</style>
 
 <h1>At-Risk &amp; Recovery Panel</h1><div style="font-size:15px;color:#3F4B5C;margin-top:-4px;margin-bottom:6px">Breaks, Holds, and Scheduled vs Attended</div>
@@ -65,7 +67,7 @@ table.top tr.lost td.stat { color: #B23A48; font-weight: 700; }
 
 <div class="tabs">
 <button class="tab-btn active" onclick="showTab(event, 'gap')">Attendance Gap</button>
-<button class="tab-btn" onclick="showTab(event, 'break')">Break Re-engagement</button><a class="tabs-drops-link" href="https://game-u.github.io/drops-analysis/" target="_blank">Dropped Students Analysis &rarr;</a>
+<button class="tab-btn" onclick="showTab(event, 'break')">Break Re-engagement</button><a class="tabs-drops-link" href="https://game-u.github.io/drops-analysis/" target="_blank">Dropped Students Analysis &rarr;</a><a class="tabs-vip-link" href="https://vip.nexus.aws.gameu.net/" target="_blank">Assign a Coordinator (VIP) &rarr;</a>
 </div>
 
 <div id="tab-gap" class="tab-pane active">
